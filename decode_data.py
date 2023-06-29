@@ -190,7 +190,7 @@ def get_decoded_data(flip_bit=False):
         while n < len(d):
             cell_v[point_count][cell_count] = (int(d[n+1]) << 8) | int(d[n])
             
-            if flip_bit and ((int(d[n+1]) << 8) | int(d[n])) > 42000:
+            if flip_bit and ((int(d[n+1]) << 8) | int(d[n])) > 50000:
                 cell_v[point_count][cell_count] = ((int(d[n+1]) << 8) | int(d[n])) & 0x7FFF
 
             n += 2
